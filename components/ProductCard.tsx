@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 type Product = {
   id: string;
   name: string;
@@ -9,7 +12,7 @@ type Product = {
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="bg-white dark:bg-black border rounded-lg shadow hover:shadow-lg transition overflow-hidden mr-6">
-      <img
+      <Image
         src={product.image}
         alt={product.name}
         className="w-48 h-48 mx-auto mt-4"
@@ -19,14 +22,14 @@ export default function ProductCard({ product }: { product: Product }) {
         <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
           {product.description}
         </p>
-        <a
+        <Link
           href={product.amazonUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-3 text-blue-600 hover:underline"
         >
           View on Amazon
-        </a>
+        </Link>
       </div>
     </div>
   );

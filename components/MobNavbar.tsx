@@ -1,5 +1,5 @@
 import { navLinks } from "@/data/navLinks";
-import Link from "next/link";
+// import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { CgClose } from "react-icons/cg";

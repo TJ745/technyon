@@ -1,7 +1,7 @@
 "use client";
 import { navLinks } from "@/data/navLinks";
 import ThemeToggle from "./ThemeToggle";
-import Link from "next/link";
+// import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";

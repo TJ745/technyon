@@ -3,7 +3,7 @@ import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import TestimonialCard from "./TestimonialCard";
+// import TestimonialCard from "./TestimonialCard";
 import { products } from "@/data/products";
 import ProductCard from "./ProductCard";
 

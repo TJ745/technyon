@@ -1,6 +1,6 @@
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-import ProductSlider from "@/components/ProductSlider";
+// import ProductSlider from "@/components/ProductSlider";
 
 export default function AllProductsPage() {
   return (
