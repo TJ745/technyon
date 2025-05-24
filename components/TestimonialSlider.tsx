@@ -45,18 +45,21 @@ export default function TestimonialSlider() {
     >
       <TestimonialCard
         image="/images/projector1.png"
-        name="John Doe"
-        role="CEO"
+        name="Talha Jamil"
+        role="Founder of TJ"
+        review="TECHNYON made choosing a projector so easy. Their comparison blog helped me pick the right one for my home setup, and it arrived in just two days via Amazon!"
       />
       <TestimonialCard
         image="/images/projector1.png"
-        name="John Doe"
-        role="CEO"
+        name="Michael Williams"
+        role="CEO of MSA"
+        review="I found the perfect air fryer for my kitchen thanks to TECHNYON. The buying process was simple and the Amazon link took me straight to what I needed—no guesswork!"
       />
       <TestimonialCard
         image="/images/projector1.png"
-        name="John Doe"
-        role="CEO"
+        name="Mohammad Wali Bin Ahmad"
+        role="Manager"
+        review="I love how TECHNYON doesn’t just throw dozens of products at you—they actually explain why each one is worth it. Bought a blender, and I use it every day!"
       />
     </Carousel>
   );

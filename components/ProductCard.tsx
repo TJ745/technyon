@@ -16,6 +16,8 @@ export default function ProductCard({ product }: { product: Product }) {
         src={product.image}
         alt={product.name}
         className="w-48 h-48 mx-auto mt-4"
+        width={480}
+        height={480}
       />
       <div className="p-4">
         <h3 className="font-semibold text-lg">{product.name}</h3>

@@ -23,7 +23,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button onClick={toggleTheme} className="ml-4">
+    <button onClick={toggleTheme} className="text-white text-xl">
       {theme === "dark" ? <FaSun /> : <FaMoon />}
     </button>
   );

@@ -6,19 +6,15 @@ type Props = {
   image: string;
   name: string;
   role: string;
+  review: string;
 };
 
-function TestimonialCard({ image, name, role }: Props) {
+function TestimonialCard({ review, image, name, role }: Props) {
   return (
     <div>
       <BsQuote className="w-14 h-14 text-red-900" />
       <p className="text-center text-gray-800 dark:text-gray-200 text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente
-        maiores aperiam id maxime quasi modi distinctio porro eius, accusantium
-        vel, in earum, possimus animi. Repellat aut nam tenetur rem.
-        Exercitationem deleniti delectus sequi illo aliquam rem minima beatae
-        atque enim officiis, numquam error? Repellendus ad repellat voluptas
-        dignissimos aperiam.
+        {review}
       </p>
       <div className="mt-6">
         <Image

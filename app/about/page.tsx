@@ -36,6 +36,14 @@ export default function AboutPage() {
             shopping—one smart choice at a time.
           </p>
         </div>
+         <div className="mx-auto xl:hidden block">
+          <Image
+            src={"/images/About.png"}
+            alt="About Us"
+            width={450}
+            height={450}
+          />
+        </div>
       </div>
     </section>
   );

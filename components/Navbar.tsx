@@ -51,7 +51,7 @@ export default function Navbar({ openNav }: Props) {
     >
       <div className="flex justify-between items-center  mx-auto h-full sm:w-[90%] w-[90%]">
         {/* Logo */}
-        <div className="text-2xl font-bold sm:text-3xl">TECHNYON</div>
+        <div className="text-2xl font-bold sm:text-3xl text-white">TECHNYON</div>
 
         {/* Navigation Links */}
         <div className="hidden lg:flex items-center space-x-10">
@@ -61,7 +61,7 @@ export default function Navbar({ openNav }: Props) {
                 // href={link.url}
                 onClick={() => handleNavClick(link.url)}
                 key={link.id}
-                className="cursor-pointer transition-all duration-200 text-white hover:text-gray-300 font-semibold"
+                className="cursor-pointer transition-all duration-200 uppercase text-white hover:text-gray-500 hover:underline font-semibold text-xl"
               >
                 <p>{link.label}</p>
               </button>
@@ -78,3 +78,4 @@ export default function Navbar({ openNav }: Props) {
     </nav>
   );
 }
+
