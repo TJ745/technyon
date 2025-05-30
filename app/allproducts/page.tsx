@@ -1,11 +1,10 @@
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-// import ProductSlider from "@/components/ProductSlider";
 
 export default function AllProductsPage() {
   return (
     <section className="pt-26 pb-16">
-      <h1 className="text-2xl sm:text-3xl text-center text-gray-800 dark:text-white font-bold">
+      <h1 className="mt-8 text-2xl sm:text-3xl text-center text-gray-800 dark:text-white font-bold">
         Our Products
       </h1>
       <span className="block w-16 h-1 bg-red-950 mx-auto mt-3"></span>
@@ -16,7 +15,6 @@ export default function AllProductsPage() {
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-        {/* <ProductSlider /> */}
       </div>
     </section>
   );

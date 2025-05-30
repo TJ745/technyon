@@ -9,16 +9,16 @@ export const products = [
   },
   {
     id: "2",
-    name: "4K Mini Projector with Speaker",
+    name: "4K Mini Projector Speaker",
     image: "/images/projector2.png",
     description: "High brightness projector perfect for home theaters.",
-    amazonUrl: "https://www.amazon.com/dp/YOUR_AMAZON_LINK_2",
+    amazonUrl: "https://www.amazon.co.uk/Technyon-Projector-Theater-Outdoor-Gaming/dp/B0F9VWG3DW/ref=sr_1_2?dib=eyJ2IjoiMSJ9.5MA7-XLtOebKO79Dvqr010E8PETF7NpSDZOAHK93GLc.lev0oGMXLR9LNMgBu0BIxxA6dYZ0nSXY7DJbNeXR2Qc&dib_tag=se&m=A161RUNEUG288T&marketplaceID=A1F83G8C2ARO7P&qid=1748608034&s=merchant-items&sr=1-2",
   },
   {
     id: "3",
-    name: "4K Ultra Bright Projector Z500",
-    image: "/images/projector2.png",
-    description: "High brightness projector perfect for home theaters.",
-    amazonUrl: "https://www.amazon.com/dp/YOUR_AMAZON_LINK_2",
+    name: "Coming Soon New Products!",
+    image: "/images/comingsoon.png",
+    description: "",
+    amazonUrl: "",
   },
 ];

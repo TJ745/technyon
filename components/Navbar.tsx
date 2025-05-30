@@ -12,6 +12,7 @@ type Props = {
 
 export default function Navbar({ openNav }: Props) {
   const [navBgColor, setNavBgColor] = useState(false);
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -51,7 +52,9 @@ export default function Navbar({ openNav }: Props) {
     >
       <div className="flex justify-between items-center  mx-auto h-full sm:w-[90%] w-[90%]">
         {/* Logo */}
-        <div className="text-2xl font-bold sm:text-3xl text-white">TECHNYON</div>
+        <div className="text-2xl font-bold sm:text-3xl text-white">
+          <h1 className="uppercase">technyon</h1>
+        </div>
 
         {/* Navigation Links */}
         <div className="hidden lg:flex items-center space-x-10">
@@ -68,14 +71,15 @@ export default function Navbar({ openNav }: Props) {
             );
           })}
         </div>
-        <ThemeToggle />
-        {/* Menu Button */}
-        <HiBars3BottomRight
-          onClick={openNav}
-          className="lg:hidden text-white w-8 h-8"
-        />
+        <div className="flex gap-4">
+          <ThemeToggle />
+          {/* Menu Button */}
+          <HiBars3BottomRight
+            onClick={openNav}
+            className="lg:hidden text-white w-8 h-8"
+          />
+        </div>
       </div>
     </nav>
   );
 }
-

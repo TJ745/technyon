@@ -3,7 +3,6 @@ import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import TestimonialCard from "./TestimonialCard";
 import { products } from "@/data/products";
 import ProductCard from "./ProductCard";
 
@@ -30,7 +29,7 @@ export default function ProductSlider() {
     <Carousel
       //   swipeable={false}
       //   draggable={false}
-      //   showDots={true}
+      // showDots={true}
       responsive={responsive}
       //   ssr={true} // means to render carousel on server-side.
       infinite={true}
@@ -40,13 +39,14 @@ export default function ProductSlider() {
       //   customTransition="all .5"
       //   transitionDuration={500}
       // containerClass="carousel-container"
-      //   removeArrowOnDeviceType={["tablet", "mobile"]}
+      removeArrowOnDeviceType={["tablet", "mobile"]}
       //   deviceType={this.props.deviceType}
       //   dotListClass="custom-dot-list-style"
       // itemClass="carousel-item-padding-40-px"
       // centerMode={true}
-      // containerClass="pb-8"
-      // itemClass="px-2"
+      // containerClass="h-[400px] w-full flex "
+      // itemClass="w-12 h-[400px] flex-shrink-0 mx-auto flex justify-center items-center"
+      // partialVisible={false}
     >
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />

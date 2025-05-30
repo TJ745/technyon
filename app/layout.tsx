@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:bg-black dark:text-white scroll-smooth transition-colors`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-100 text-black dark:bg-black dark:text-white scroll-smooth transition-colors`}
       >
         <ResponsiveNavbar />
         {children}

@@ -44,22 +44,39 @@ export default function TestimonialSlider() {
       //   itemClass="carousel-item-padding-40-px"
     >
       <TestimonialCard
-        image="/images/projector1.png"
+        image="/images/Male-Avatar.png"
         name="Talha Jamil"
-        role="Founder of TJ"
-        review="TECHNYON made choosing a projector so easy. Their comparison blog helped me pick the right one for my home setup, and it arrived in just two days via Amazon!"
+        role="Customer"
+        review="TECHNYON made choosing a projector so easy. They support me pick the right one for my home setup, and it arrived in just two days via Amazon!"
+        ratings={5}
       />
       <TestimonialCard
-        image="/images/projector1.png"
+        image="/images/Male-Avatar.png"
         name="Michael Williams"
-        role="CEO of MSA"
-        review="I found the perfect air fryer for my kitchen thanks to TECHNYON. The buying process was simple and the Amazon link took me straight to what I needed—no guesswork!"
+        role="Customer"
+        review="I found the perfect projector for my home thanks to TECHNYON. The buying process was simple and the Amazon link took me straight to what I needed no guesswork!"
+        ratings={4.5}
       />
       <TestimonialCard
-        image="/images/projector1.png"
-        name="Mohammad Wali Bin Ahmad"
-        role="Manager"
-        review="I love how TECHNYON doesn’t just throw dozens of products at you—they actually explain why each one is worth it. Bought a blender, and I use it every day!"
+        image="/images/Male-Avatar.png"
+        name="Osama Ali"
+        role="Customer"
+        review="I love how TECHNYON doesn't just throw dozens of products at you. They actually explain why each one is worth it. Bought a projector, and I use it every day!"
+        ratings={4.5}
+      />
+      <TestimonialCard
+        image="/images/Male-Avatar.png"
+        name="Ian Kevin"
+        role="Customer"
+        review="I was overwhelmed by the choices for projectors, but TECHNYON made it easy. Their detailed reviews and Amazon links helped me find exactly what I needed without any hassle."
+        ratings={4.5}
+      />
+      <TestimonialCard
+        image="/images/Male-Avatar.png"
+        name="Andy B"
+        role="Customer"
+        review="Fantastic price, fantastic product. Needed something for entertaining the kids whilst away in the caravan - this gives us our own cinema in the awning and they absolutely love it! The picture quality is great and it's pretty straight forward to set up. Glad I went ahead and purchased this :)"
+        ratings={5}
       />
     </Carousel>
   );
