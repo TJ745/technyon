@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaSnapchat,
-  FaTiktok,
-} from "react-icons/fa6";
+// import {
+//   FaFacebookF,
+//   FaInstagram,
+//   FaSnapchat,
+//   FaTiktok,
+// } from "react-icons/fa6";
 import Modal from "./ModalServices";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,13 +20,14 @@ export default function Footer() {
         {/* 1st part */}
         <div>
           <div className="font-bold text-3xl">TECHNYON</div>
-          <p className="mt-5 font-semibold text-gray-300 text-sm">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-            impedit? Perferendis magnam amet, non veritatis officia culpa
-            nesciunt natus facilis.
+          <p className="mt-5 font-semibold dark:text-gray-300 text-sm">
+            At TECHNYON, we bring you curated tech products designed to enhance
+            everyday life. <br />
+            Shop smarter with trusted Amazon links and discover innovations that
+            fit your lifestyle.
           </p>
           {/* Social icons */}
-          <div className="flex items-center space-x-4 mt-6">
+          {/* <div className="flex items-center space-x-4 mt-6">
             <div className="w-8 h-8 bg-blue-700 flex items-center justify-center flex-col rounded-full">
               <FaFacebookF />
             </div>
@@ -38,44 +40,58 @@ export default function Footer() {
             <div className="w-8 h-8 bg-gray-900 flex items-center justify-center flex-col rounded-full">
               <FaTiktok />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* 2nd part */}
         <div className="space-y-5">
           <h1 className="text-lg font-bold">Company</h1>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
-            Home
-          </p>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
-            Products
-          </p>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
-            About Us
-          </p>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
-            Contact Us
-          </p>
+          <div className="flex flex-col space-y-5">
+            <Link
+              href="#home"
+              className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+            >
+              Home
+            </Link>
+            <Link
+              href="#products"
+              className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+            >
+              Products
+            </Link>
+            <Link
+              href="#about"
+              className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+            >
+              About Us
+            </Link>
+            <Link
+              href="#contact"
+              className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
 
         {/* 3rd part */}
         <div className="space-y-5">
           <h1 className="text-lg font-bold">Services</h1>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
+          <p className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
             Legal Information
           </p>
           <p
             onClick={() => setIsModalOpen(true)}
-            className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+            className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
           >
             Terms & Conditions
           </p>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
+          <p className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
             Privacy Policy
           </p>
-          <p className="text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
+          {/* <p className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
             Report Abuse
-          </p>
+          </p> */}
         </div>
 
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
@@ -105,23 +121,30 @@ export default function Footer() {
         </Modal>
         {/* 4th part */}
         <div>
-          <h1 className="text-lg font-bold">Get in Touch</h1>
-          <div className="mt-6">
-            <h1 className="text-sm">Our Mobile Number</h1>
-            <h1 className="text-base font-bold mt-1">+44</h1>
-          </div>
-          <div className="mt-6">
-            <h1 className="text-sm">Our Email</h1>
-            <h1 className="text-base font-bold mt-1">UK@gmail.com</h1>
+          <h1 className="text-lg font-bold">Join Our Newsletter</h1>
+          <div className="mt-4">
+            <h1 className="text-sm">
+              Subscribe to our newsletter for the latest updates, tips, and
+              insights. Be the first to know about new product launches and
+              exclusive offers.
+            </h1>
+            <input
+              placeholder="Enter Email"
+              className="text-base  mt-4 bg-gray-200  text-gray-800 dark:text-gray-900 px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              type="email"
+            />
+            <button className="mt-4 bg-red-900 text-white px-6 py-2 rounded-lg hover:bg-red-950 transition duration-300 cursor-pointer">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
       {/* Copyright */}
-      <div className="mt-8 w-[80%] mx-auto border-t pt-8 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
-        <p className="text-center md:text-left">
+      <div className="mt-8 w-[80%] mx-auto border-t pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p className="w-full text-center">
           Copyright &copy; {currentYear} TECHNYON. All Rights Reserved
         </p>
-        <div className="flex items-center space-x-4 mt-4 md:mt-0">
+        {/* <div className="flex items-center space-x-4 mt-4 md:mt-0">
           <span>Social : </span>
           <span className="text-gray-500 hover:text-gray-800">
             <FaFacebookF />
@@ -135,7 +158,7 @@ export default function Footer() {
           <span className="text-gray-500 hover:text-gray-800">
             <FaTiktok />
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

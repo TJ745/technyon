@@ -9,7 +9,7 @@ export default function AboutPage() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         ABOUT US
       </motion.h1>
@@ -18,7 +18,7 @@ export default function AboutPage() {
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       ></motion.span>
       <div className="w-[80%] mx-auto grid items-center grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
         {/* About Us */}
@@ -27,7 +27,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <Image
             src={"/images/AboutUs.png"}
@@ -41,7 +41,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <Image
             src={"/images/AboutUs.png"}
@@ -55,7 +55,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Who We Are</h2>
           <p className="text-justify">

@@ -7,7 +7,7 @@ import {
   FaSnapchat,
   FaTiktok,
 } from "react-icons/fa6";
-// import { motion } from "motion/react";
+import { motion } from "motion/react";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -45,30 +45,60 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="pt-16 pb-16 scroll-mt-[12vh] border" id="contact">
-      <h1 className="text-2xl sm:text-3xl text-center text-gray-800 dark:text-white font-bold uppercase">
+    <section className="pt-16 pb-16 scroll-mt-[12vh]" id="contact">
+      <motion.h1
+        className="text-2xl sm:text-3xl text-center text-gray-800 dark:text-white font-bold uppercase"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+      >
         Get in Touch
-      </h1>
-      <span className="block w-16 h-1 bg-red-950 mx-auto mt-3"></span>
-      <p className="text-center text-sm sm:text-base text-gray-700 dark:text-gray-200 mt-4">
+      </motion.h1>
+      <motion.span
+        className="block w-16 h-1 bg-red-950 mx-auto mt-3"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false }}
+      ></motion.span>
+      <motion.p
+        className="text-center text-sm sm:text-base text-gray-700 dark:text-gray-200 mt-4"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+      >
         Have a question, suggestion, complaint or inquiry? We&apos;d love to
         hear from you.
-      </p>
-      <p className="text-center text-sm sm:text-base text-gray-700 dark:text-gray-200">
+      </motion.p>
+      <motion.p
+        className="text-center text-sm sm:text-base text-gray-700 dark:text-gray-200"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+      >
         Whether you&apos;re looking for product recommendations, our team is
         here to help.
-      </p>
+      </motion.p>
       <div className="w-full flex justify-center mt-8">
         <div className="w-full max-w-6xl flex flex-col lg:flex-row items-start gap-12 px-6">
           {/* Left Side */}
-          <div className="w-full lg:w-1/2 hidden lg:block px-8 py-10">
+          <motion.div
+            className="w-full lg:w-1/2 hidden lg:block px-8 py-10"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+          >
             <h2 className="text-2xl font-semibold mb-6">Contact Details</h2>
             <p className="mb-4">
               <strong>Address:</strong>
               <br />
-              1234 Developer Lane
+              395 Strand
               <br />
-              Tech City, TC 12345
+              London, United Kingdom
             </p>
             <p className="mb-4">
               <strong>Phone:</strong>
@@ -82,12 +112,12 @@ export default function ContactPage() {
             </p>
             <div className="mt-6">
               <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
-              <div className="flex gap-8">
+              <div className="flex gap-4">
                 <Link
                   href="https://github.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition"
+                  className="hover:text-gray-200 transition bg-blue-600 rounded-xl p-2 text-white"
                 >
                   <FaFacebookF className="text-2xl" />
                 </Link>
@@ -95,7 +125,7 @@ export default function ContactPage() {
                   href="https://linkedin.com/in/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition"
+                  className="hover:text-gray-200 transition bg-rose-600 rounded-xl p-2 text-white"
                 >
                   <FaInstagram className="text-2xl" />
                 </Link>
@@ -103,7 +133,7 @@ export default function ContactPage() {
                   href="https://twitter.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition"
+                  className="hover:text-gray-200 transition bg-yellow-600 rounded-xl p-2 text-white"
                 >
                   <FaSnapchat className="text-2xl" />
                 </Link>
@@ -111,15 +141,21 @@ export default function ContactPage() {
                   href="https://twitter.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition"
+                  className="hover:text-gray-200 transition bg-gray-900 rounded-xl p-2 text-white"
                 >
                   <FaTiktok className="text-2xl" />
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* Right Side */}
-          <div className="w-full lg:w-1/2">
+          <motion.div
+            className="w-full lg:w-1/2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
+          >
             <form onSubmit={handleSubmit} className="w-full mt-8">
               <div>
                 <input
@@ -169,7 +205,7 @@ export default function ContactPage() {
             </form>
 
             <p className="text-sm text-gray-600 text-center mt-6">{status}</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
