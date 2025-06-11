@@ -24,7 +24,7 @@ export default function Newsletter() {
       setStatus("Subscription successful!");
       setEmail("");
     } else {
-      setStatus("Failed to subscribe.");
+      setStatus(data.error || "Failed to subscribe.");
     }
   };
 
