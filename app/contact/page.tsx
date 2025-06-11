@@ -103,12 +103,12 @@ export default function ContactPage() {
             <p className="mb-4">
               <strong>Phone:</strong>
               <br />
-              (123) 456-7890
+              +44 7492 922111
             </p>
             <p className="mb-4">
               <strong>Email:</strong>
               <br />
-              contact@example.com
+              argrouplondon7@gmail.com
             </p>
             <div className="mt-6">
               <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   <FaFacebookF className="text-2xl" />
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.instagram.com/technyon?igsh=Mmk2eGdmaXB4dHRj"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gray-200 transition bg-rose-600 rounded-xl p-2 text-white"

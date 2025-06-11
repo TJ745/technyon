@@ -1,18 +1,13 @@
 "use client";
 import React, { useState } from "react";
-// import {
-//   FaFacebookF,
-//   FaInstagram,
-//   FaSnapchat,
-//   FaTiktok,
-// } from "react-icons/fa6";
 import Modal from "./ModalServices";
 import Link from "next/link";
+import Newsletter from "./Newsletter";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState("");
 
   return (
     <div className="pt-16 pb-16 border-t border-gray-600">
@@ -77,16 +72,22 @@ export default function Footer() {
         {/* 3rd part */}
         <div className="space-y-5">
           <h1 className="text-lg font-bold">Services</h1>
-          <p className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
+          <p
+            onClick={() => setIsModalOpen("legal")}
+            className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+          >
             Legal Information
           </p>
           <p
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setIsModalOpen("terms")}
             className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
           >
             Terms & Conditions
           </p>
-          <p className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
+          <p
+            onClick={() => setIsModalOpen("privacy")}
+            className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm"
+          >
             Privacy Policy
           </p>
           {/* <p className="dark:text-gray-300 hover:text-gray-400 font-medium cursor-pointer text-sm">
@@ -94,33 +95,122 @@ export default function Footer() {
           </p> */}
         </div>
 
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <h2 className="text-xl font-semibold mb-4">Terms & Conditions</h2>
-          <p className="text-gray-300 text-justify text-sm">
-            Welcome to TECHNYON.
-            <br /> By using our website, you agree to the following terms:
-            <br />
-            1. Use of the Site: TECHNYON is a product showcase platform. We do
-            not currently sell directly; we link to trusted partners like Amazon
-            for checkout. We are not responsible for transactions made on
-            third-party sites.
-            <br />
-            2. Intellectual Property: All content (text, images, logos, product
-            descriptions) on TECHNYON is owned by us or used with permission.
-            Please do not copy or reproduce without consent. <br />
-            3. Accuracy of Information: We do our best to keep product listings
-            accurate and updated, but we cannot guarantee that all information
-            is 100% current or error-free.
-            <br />
-            4. External Links: TECHNYON links to external platforms (e.g.,
-            Amazon). We are not responsible for their content, privacy policies,
-            or service quality. <br />
-            5. Future Changes: We may update these Terms at any time. Continued
-            use of the site means you agree to the updated version.
-          </p>
+        <Modal isOpen={!!isModalOpen} onClose={() => setIsModalOpen("")}>
+          {isModalOpen === "legal" && (
+            <>
+              <h2 className="text-xl font-semibold mb-4">Legal Information</h2>
+              <p className="text-gray-300 text-justify text-sm">
+                <p className="text-lg font-semibold">1. Disclaimer</p>
+                TECHNYON provides information and links to third-party products
+                for informational purposes only. We do not endorse or guarantee
+                the performance or safety of any products displayed. Users are
+                responsible for evaluating and using third-party products or
+                services. <br />
+                <br />
+                <p className="text-lg font-semibold">
+                  2. Limitation of Liability
+                </p>
+                To the fullest extent permitted by law, TECHNYON and its
+                affiliates shall not be liable for any direct, indirect,
+                incidental, or consequential damages resulting from your use of
+                the site or reliance on any information provided.
+                <br />
+                <br />
+                <p className="text-lg font-semibold">3. Governing Law </p>
+                These Terms & Conditions are governed by the laws of United
+                Kingdom. Any disputes arising from your use of the site will be
+                resolved in the appropriate courts of London.
+              </p>
+            </>
+          )}
+          {isModalOpen === "terms" && (
+            <>
+              <h2 className="text-xl font-semibold mb-4">Terms & Conditions</h2>
+              <p className="text-gray-300 text-justify text-sm">
+                By accessing or using our website, you agree to be bound by the
+                following Terms & Conditions. Please read them carefully.
+                <br />
+                <br />
+                <p className="text-lg font-semibold">1. Use of the Site</p>
+                TECHNYON is a product showcase platform. We do not currently
+                sell directly; we link to trusted partners like Amazon for
+                checkout. We are not responsible for transactions made on
+                third-party sites other than Amazon.
+                <br />
+                <br />
+                <p className="text-lg font-semibold">
+                  2. Intellectual Property
+                </p>
+                All content (text, images, logos, product descriptions) on
+                TECHNYON is owned by us or used with permission. Please do not
+                copy or reproduce without our written consent. <br />
+                <br />
+                <p className="text-lg font-semibold">
+                  3. Accuracy of Information
+                </p>
+                We strive to ensure that product listings and information on our
+                site are accurate and up to date.
+                <br />
+                <br />
+                <p className="text-lg font-semibold"> 4. External Links</p>
+                Our site may contain links to external websites (e.g.,
+                Amazon.co.uk). These sites are not under our control, and we are
+                not responsible for their content, privacy policies, or the
+                quality of their services. Your interactions with those sites
+                are governed by their respective terms and policies. <br />
+                <br />
+                <p className="text-lg font-semibold">
+                  5. Modifications to Terms
+                </p>
+                We reserve the right to update or modify these Terms &
+                Conditions at any time without prior notice. Your continued use
+                of the site after any changes indicates your acceptance of the
+                revised terms.
+              </p>
+            </>
+          )}
+          {isModalOpen === "privacy" && (
+            <>
+              <h2 className="text-xl font-semibold mb-4">Privacy Policy</h2>
+              <p className="text-gray-300 text-justify text-sm">
+                Your privacy is important to us. This section outlines how we
+                collect, use, and protect your personal information. <br />
+                <p className="text-lg font-semibold">
+                  1. Information We Collect
+                </p>
+                • Automatically Collected Data: <br />
+                When you visit our site, we may collect anonymized data such as
+                your IP address, browser type, referring/exit pages, and usage
+                patterns. <br />• Voluntarily Provided Data: <br />
+                If you contact us or subscribe to a newsletter, we may collect
+                your name, email address, or other relevant information.
+                <br />
+                <p className="text-lg font-semibold">2. Use of Information</p>
+                We use the data we collect to: <br />• Improve the performance
+                and content of our website <br />• Understand user behavior and
+                preferences <br />• Respond to inquiries and feedback <br />•
+                Communicate updates or marketing
+                <br />
+                <p className="text-lg font-semibold">3. Cookies</p> Our website
+                may use cookies or similar technologies to enhance user
+                experience. You can manage cookie preferences through your
+                browser settings.
+                <br />
+                <p className="text-lg font-semibold">4. Data Sharing</p> We do
+                not sell, rent, or trade your personal data. We may share
+                information with service providers (e.g., analytics tools)
+                strictly to improve our services.
+                <br />
+                <p className="text-lg font-semibold">5. Your Rights</p>
+                Depending on your location, you may have rights to access,
+                correct, or delete your personal information. To exercise your
+                rights, please contact us at our Email.
+              </p>
+            </>
+          )}
         </Modal>
         {/* 4th part */}
-        <div>
+        {/* <div>
           <h1 className="text-lg font-bold">Join Our Newsletter</h1>
           <div className="mt-4">
             <h1 className="text-sm">
@@ -137,7 +227,8 @@ export default function Footer() {
               Subscribe
             </button>
           </div>
-        </div>
+        </div> */}
+        <Newsletter />
       </div>
       {/* Copyright */}
       <div className="mt-8 w-[80%] mx-auto border-t pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
