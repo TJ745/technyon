@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND2_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   const { email } = await req.json();
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "technyon.com <onboarding@resend.dev>",
+      from: "Technyon <noreply@technyon.com>",
       to: email,
       subject: `Newsletter Subscription`,
       html: `<p>Thank you for subscribing to our newsletter!</p>`,

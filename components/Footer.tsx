@@ -99,7 +99,7 @@ export default function Footer() {
           {isModalOpen === "legal" && (
             <>
               <h2 className="text-xl font-semibold mb-4">Legal Information</h2>
-              <p className="text-gray-300 text-justify text-sm">
+              <div className="text-gray-300 text-justify text-sm">
                 <p className="text-lg font-semibold">1. Disclaimer</p>
                 TECHNYON provides information and links to third-party products
                 for informational purposes only. We do not endorse or guarantee
@@ -120,13 +120,13 @@ export default function Footer() {
                 These Terms & Conditions are governed by the laws of United
                 Kingdom. Any disputes arising from your use of the site will be
                 resolved in the appropriate courts of London.
-              </p>
+              </div>
             </>
           )}
           {isModalOpen === "terms" && (
             <>
               <h2 className="text-xl font-semibold mb-4">Terms & Conditions</h2>
-              <p className="text-gray-300 text-justify text-sm">
+              <div className="text-gray-300 text-justify text-sm">
                 By accessing or using our website, you agree to be bound by the
                 following Terms & Conditions. Please read them carefully.
                 <br />
@@ -166,13 +166,13 @@ export default function Footer() {
                 Conditions at any time without prior notice. Your continued use
                 of the site after any changes indicates your acceptance of the
                 revised terms.
-              </p>
+              </div>
             </>
           )}
           {isModalOpen === "privacy" && (
             <>
               <h2 className="text-xl font-semibold mb-4">Privacy Policy</h2>
-              <p className="text-gray-300 text-justify text-sm">
+              <div className="text-gray-300 text-justify text-sm">
                 Your privacy is important to us. This section outlines how we
                 collect, use, and protect your personal information. <br />
                 <p className="text-lg font-semibold">
@@ -205,29 +205,12 @@ export default function Footer() {
                 Depending on your location, you may have rights to access,
                 correct, or delete your personal information. To exercise your
                 rights, please contact us at our Email.
-              </p>
+              </div>
             </>
           )}
         </Modal>
         {/* 4th part */}
-        {/* <div>
-          <h1 className="text-lg font-bold">Join Our Newsletter</h1>
-          <div className="mt-4">
-            <h1 className="text-sm">
-              Subscribe to our newsletter for the latest updates, tips, and
-              insights. Be the first to know about new product launches and
-              exclusive offers.
-            </h1>
-            <input
-              placeholder="Enter Email"
-              className="text-base  mt-4 bg-gray-200  text-gray-800 dark:text-gray-900 px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="email"
-            />
-            <button className="mt-4 bg-red-900 text-white px-6 py-2 rounded-lg hover:bg-red-950 transition duration-300 cursor-pointer">
-              Subscribe
-            </button>
-          </div>
-        </div> */}
+
         <Newsletter />
       </div>
       {/* Copyright */}
