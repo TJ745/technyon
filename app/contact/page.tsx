@@ -4,7 +4,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaPaperPlane,
-  FaSnapchat,
+  // FaSnapchat,
   FaTiktok,
 } from "react-icons/fa6";
 import { motion } from "motion/react";
@@ -114,10 +114,10 @@ export default function ContactPage() {
               <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
               <div className="flex gap-4">
                 <Link
-                  href="https://github.com/yourusername"
+                  href="https://www.facebook.com/share/1PoTqxTLgu/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition bg-blue-600 rounded-xl p-2 text-white"
+                  className="hover:text-gray-200 transition hover:bg-blue-600 bg-stone-400 dark:bg-zinc-800 rounded-xl p-2 text-white"
                 >
                   <FaFacebookF className="text-2xl" />
                 </Link>
@@ -125,23 +125,23 @@ export default function ContactPage() {
                   href="https://www.instagram.com/technyon?igsh=Mmk2eGdmaXB4dHRj"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition bg-rose-600 rounded-xl p-2 text-white"
+                  className="hover:text-gray-200 transition hover:bg-rose-600 bg-stone-400 dark:bg-zinc-800 rounded-xl p-2 text-white"
                 >
                   <FaInstagram className="text-2xl" />
                 </Link>
-                <Link
+                {/* <Link
                   href="https://twitter.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition bg-yellow-600 rounded-xl p-2 text-white"
+                  className="hover:text-gray-200 transition hover:bg-yellow-600 bg-zinc-800 rounded-xl p-2 text-white"
                 >
                   <FaSnapchat className="text-2xl" />
-                </Link>
+                </Link> */}
                 <Link
-                  href="https://twitter.com/yourusername"
+                  href="https://vt.tiktok.com/ZNdAujAY3/?page=TikTokShop"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-200 transition bg-gray-900 rounded-xl p-2 text-white"
+                  className="hover:text-gray-200 transition hover:bg-gray-900 bg-stone-400 dark:bg-zinc-800 rounded-xl p-2 text-white"
                 >
                   <FaTiktok className="text-2xl" />
                 </Link>
