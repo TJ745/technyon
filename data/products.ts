@@ -17,6 +17,25 @@ export const products = [
     amazonUrl:
       "https://www.amazon.co.uk/Technyon-Projector-Theater-Outdoor-Gaming/dp/B0F9VWG3DW/ref=sr_1_2?dib=eyJ2IjoiMSJ9.5MA7-XLtOebKO79Dvqr010E8PETF7NpSDZOAHK93GLc.lev0oGMXLR9LNMgBu0BIxxA6dYZ0nSXY7DJbNeXR2Qc&dib_tag=se&m=A161RUNEUG288T&marketplaceID=A1F83G8C2ARO7P&qid=1748608034&s=merchant-items&sr=1-2",
   },
+  {
+    id: "3",
+    name: "HY260 PRO Projector Speaker",
+    category: "Projectors",
+    image: "/images/projector3.png",
+    description: "This smart projector runs on Android 14.0, giving you access to over 5000+ apps.",
+    amazonUrl:
+      "https://www.amazon.co.uk/Projector-Android-Portable-Mirroring-Compatible/dp/B0FP9QG7NJ/ref=sr_1_6?dib=eyJ2IjoiMSJ9.5MA7-XLtOebKO79Dvqr01zurK3B61sNC80pYAjvXJQrGjHj071QN20LucGBJIEps.O4gd_2fBWDukrDgFv03nKNNqN21voIMMeUZX5BffsAY&dib_tag=se&keywords=Technyon&qid=1765540518&s=computers&search-type=ss&sr=1-6&th=1",
+  },
+
+  {
+    id: "4",
+    name: "Massage Gun",
+    category: "Health & Wellness",
+    image: "/images/massage-gun1.png",
+    description: "Portable Mini Massage Gun with 8 Heads & Carry Case.",
+    amazonUrl:
+      "https://www.amazon.co.uk/Technyon-Massage-Gun-Deep-Tissue/dp/B0FFPKCYH5/ref=sr_1_1?dib=eyJ2IjoiMSJ9.lOREdyDrzwAnBW3MrA-tBg.SB1UASKhf8xM1iYWmQZnCJv-UJ0skjMIbBVmWUuS0ew&dib_tag=se&keywords=Technyon&qid=1765540518&s=computers&search-type=ss&sr=1-1-catcorr",
+  },
 
   {
     id: "300",

@@ -100,11 +100,11 @@ export default function ContactPage() {
               <br />
               London, United Kingdom
             </p>
-            <p className="mb-4">
+            {/* <p className="mb-4">
               <strong>Phone:</strong>
               <br />
               +44 7492 922111
-            </p>
+            </p> */}
             <p className="mb-4">
               <strong>Email:</strong>
               <br />
